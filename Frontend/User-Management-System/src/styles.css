@@ -1,0 +1,10 @@
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+ .custom-snackbar {
+        width:0px; /* Adjust the width as needed */
+        height: 170px;
+        background-color: #333; /* Example background color */
+        color: #8e1c1c; /* Example text color */    
+      }

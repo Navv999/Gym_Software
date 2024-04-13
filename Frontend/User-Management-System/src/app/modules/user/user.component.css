@@ -1,0 +1,296 @@
+.campaign_pbn,
+.close-btn {
+    background: 0 0;
+    border: none
+}
+
+.mat-header-cell {
+    color: #1a1f2f;
+    text-transform: capitalize;
+    font-weight: 500
+}
+
+.mat-mini-fab.mat-primary {
+    background: #fa721b
+}
+
+::ng-deep .mat-menu-content button.mat-mdc-menu-item .iconsize {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px !important;
+    color: #f29d38;
+    font-size: 21px;
+    line-height: initial
+}
+
+.topblockheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+button .example-margin {
+    margin: 0
+}
+
+::ng-deep .cdk-overlay-connected-position-bounding-box {
+    z-index: 9999 !important
+}
+
+::ng-deep .cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing {
+    z-index: -1
+}
+
+.topblockheader .header-buttons li {
+    display: inline-block
+}
+
+.topblockheader .header-buttons {
+    margin: 0;
+    display: flex;
+    align-items: center
+}
+
+.topblockheader .header-buttons li .icon-button-demo button {
+    margin-bottom: 0
+}
+
+.auth-form-btn .mat-icon {
+    margin: 100
+}
+
+.table-responsive .table tbody tr td,
+.table-responsive .table tbody tr th {
+    padding: 6px 10px
+}
+
+.table thead tr th button.mat-button {
+    min-width: auto;
+    padding: 0 5px
+}
+
+::ng-deep .mat-slide-toggle-bar {
+    margin-right: 0
+}
+
+::ng-deep .mat-slide-toggle-content {
+    margin-right: 8px
+}
+
+::ng-deep .mat-slide-toggle .mat-slide-toggle-thumb,
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: #fff
+}
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: #6ad397
+}
+
+::ng-deep .mat-slide-toggle-thumb {
+    width: 12px;
+    height: 12px;
+    box-shadow: none
+}
+
+::ng-deep .mat-slide-toggle-bar {
+    background-color: rgba(0, 0, 0, .38);
+    height: 16px
+}
+
+.num_purchase .modal-content h5,
+.num_purchase .modal-content p {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    font-size: 15px;
+    line-height: inherit
+}
+
+.num_purchase .modal-content p {
+    padding: 0 30px;
+    font-size: 13px;
+    line-height: initial
+}
+
+.num_purchase .modal-content h5 .material-icons {
+    margin-right: 10px;
+    color: #e86e14
+}
+
+.num_purchase .modal-content .modal-footer {
+    justify-content: center
+}
+
+.table-responsive .norecordlist {
+    position: relative;
+    top: 50%;
+    text-align: center
+}
+
+.campaign_pbn {
+    height: auto;
+    line-height: initial;
+    color: #f29d38;
+    padding: 0 2px
+}
+
+.campaign_pbn .material-icons {
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
+    color: #f29d38;
+    line-height: 20px
+}
+
+@media only screen and (max-width:768px) {
+    .topblockheader {
+        display: block
+    }
+
+    .topblockheader .header-buttons input.search-field {
+        width: 200px
+    }
+
+    .topblockheader .header-buttons {
+        justify-content: space-between;
+        margin-bottom: .6rem !important
+    }
+
+    section.content {
+        margin-top: 62px
+    }
+
+    section.content .content-block {
+        padding: 0
+    }
+
+    body.ls-closed section.content,
+    section.content {
+        margin-right: 15px !important;
+        margin-left: 15px !important
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #c0adad;
+    padding: 0
+}
+
+.close-btn:hover {
+    color: rgba(7, 7, 7, .959)
+}
+
+.disabled-button:disabled {
+    color: #fff;
+    background-color: #000
+}
+
+
+table {
+    width: 50%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 50%;
+  }
+
+.custom-table {
+    background-color: #e9ecef; /* Change the background color to light gray */
+    padding: 20px; /* Add padding for spacing */
+    margin-right: 10px; /* Adjust position slightly to the right */
+    margin-bottom: 10px; /* Adjust position slightly downward */
+    box-shadow: 2x 2px 4px rgba(0, 0, 0, 0.2); /* Add a slight shadow for elevation */
+}
+
+
+    .table-responsive {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+      }
+      
+      .table-responsive th, .table-responsive td {
+        /* border: 1px solid #ddd; */
+        /* padding: 8px; */
+        /* text-align: center; */
+        border-radius: 8px; /* Curved edges */
+        font-size: 14px; /* Decrease font size */
+      }
+      
+      .table-responsive th {
+        background-color: #f2f2f2;
+        color: #333;
+        font-weight: bold;
+        border-bottom: none; /* Remove bottom border for table header */
+      }
+      
+      .table-responsive tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      
+      .table-responsive tbody tr:hover {
+        background-color: #f2f2f2;
+      }
+      
+      .create-user-btn {
+        white-space: nowrap; /* Prevent line breaks in button text */
+        background: #3f51b5;
+    }
+      
+      .search-input {
+        margin-right: 0px; /* Adjust margin as needed */
+        margin-left: 0px; /* Adjust margin as needed */
+        margin-top: 25px; /* Adjust margin as needed */
+        width: 250px;
+
+      }
+
+      .mat-form-field {
+        width: 0%; /* Set width to 100% to fill the container */
+      }
+      
+      .search-input .mat-form-field-wrapper {
+        border-radius: 20px; /* Adjust border-radius as needed */
+      }
+      
+      .search-input .mat-form-field-infix {
+        font-size: 14px; /* Adjust font size as needed */
+        padding: 10px; /* Adjust padding as needed */
+      }
+      
+      .create-user-btn {
+        margin-left: 10px; /* Adjust margin as needed */
+        border-radius: 20px; /* Adjust border-radius as needed */
+        padding: 10px 20px; /* Adjust padding as needed */
+        font-size: 14px; /* Adjust font size as needed */
+      }
+      
+      .modal-backdrop.show {
+        /* opacity: var(--bs-backdrop-opacity); */
+        z-index: 0;
+        opacity: 0.1; /* Adjust the opacity as needed */
+        pointer-events: none; /* Allow interaction with elements behind the backdrop */
+    }
+    
+    .modal-backdrop {
+        opacity: 0.1; /* Adjust the opacity as needed */
+        pointer-events: none; /* Allow interaction with elements behind the backdrop */
+      }
+      
+      .modal-backdrop.show {
+        backdrop-filter: blur(8px); /* Adjust the blur radius as needed */
+    }
+   
+    
+      
+     
+   
+      
+

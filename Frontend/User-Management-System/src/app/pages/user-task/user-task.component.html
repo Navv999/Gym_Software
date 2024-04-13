@@ -1,0 +1,145 @@
+<!-- <p>user-task works!</p> -->
+<h2 class="class">Task List</h2>
+<div>
+  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalLong" *ngIf="userShow"
+    (click)="clickAddTask()">Add Task</button>&nbsp;
+  <br />
+
+  <table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Task_No</th>
+        <th scope="col">Task_Name</th>
+        <th scope="col">Employee</th>
+        <th scope="col">UserID</th>
+        <th scope="col">Assign</th>
+        <th scope="col">Date</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of allTaskData; index as i">
+        <th>{{i+1}}</th>
+        <td>{{item.task_name}}</td>
+        <td>{{item.employee}}</td>
+        <td>{{item.userID}}</td>
+        <td>{{item.assign}}</td>
+        <td>{{item.date}}</td>
+        <td>{{item.status}}</td>
+        <td>
+          <div>
+            <button mat-button [matMenuTriggerFor]="menu" class="header-dropdown tbl-action-btn">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item type="button" data-toggle="modal" data-target="#exampleModalLong"
+                (click)="onEditTask(item)">
+                <i _ngcontent-lgf-c182="" class="fas fa-pencil-alt"></i> Edit
+              </button>
+              <!-- <button mat-menu-item >
+                  <i _ngcontent-lgf-c182="" class="fas fa-pencil-alt"></i> Task
+              </button> -->
+              <button mat-menu-item *ngIf="userShow" (click)="deleteData(item)">
+                <i _ngcontent-lgf-c182="" class="fas fa-pencil-alt"></i> Delete
+              </button>
+            </mat-menu>
+            <!-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalLong" 
+              (click)="onEditTask(item)">Edit</button>&nbsp;
+            <button type="button" class="btn btn-danger" *ngIf="userShow" (click)="deleteData(item)">Delete</button> -->
+            <!-- <button type="button" class="btn btn-danger" (click)="taskDelete(item.id)">Delete</button> -->
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- pagination==>> -->
+  <!-- <div class="pagination-buttons">
+    <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+  </div> -->
+
+  <!-- <mat-paginator [pageSizeOptions]="[3,5,10]" [length]="length" showFirstLastButtons [pageIndex]="pageIndex"
+    [pageSize]="pageSize" (page)="handlePage($event)"></mat-paginator> -->
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLongTitle">Task</h2>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="taskform">
+
+            <label>Task Name</label>
+            <br />
+            <input type="text" placeholder="Enter Task Name" formControlName="task_name">
+            <br>
+            <span style="color:red;"
+              *ngIf="taskform.controls['task_name'].touched && taskform.get('task_name')?.hasError('required')">*Task
+              Name is
+              required</span>
+            <span style="color:red;"
+              *ngIf="taskform.get('task_name')?.hasError('pattern') || taskform.get('task_name')?.hasError('minlength')">*Name
+              should be in letter</span>
+            <br /> <br />
+
+            <label>Employee Name</label>
+            <br />
+            <select class="form-select" aria-label="Default select example" formControlName="employee">
+              <option selected>User</option>
+              <option value="Pawan">Pawan</option>
+              <option value="Ajeet">Ajeet</option>
+              <option value="Naveen">Naveen</option>
+              <option value="Imran">Imran</option>
+
+            </select>
+            <br />
+            <label>User ID</label>
+            <br />
+            <input type="number" placeholder="Enter User ID" formControlName="userID">
+            <br><br>
+
+            <label>Assign Name</label>
+            <select class="form-select" aria-label="Default select example" formControlName="assign">
+              <option selected>User</option>
+              <option value="Sandeep Sir">Sandeep Sir</option>
+              <option value="Veer Sir">Veer Sir</option>
+              <option value="Vishal Sir">Vishal Sir</option>
+            </select>
+            <br /> <br />
+
+            <label>Date</label>
+            <br />
+            <input type="date" placeholder="Enter Date" formControlName="date">
+            <br>
+            <span style="color:red;"
+              *ngIf="taskform.controls['date'].touched && taskform.get('date')?.hasError('required')">*</span>
+            <br />
+            <label>Status</label>
+            <select class="form-select" aria-label="Default select example" formControlName="status">
+              <option selected>Pending</option>
+              <option value="Completed">Completed</option>
+            </select>
+            <br /> <br />
+
+            <!-- <button type="button" class="btn btn-success" (click)="addTask(task.value)">Submit</button> -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" [disabled]="taskform.invalid" *ngIf="showAdd" class="btn btn-primary"
+                data-dismiss="modal" (click)="addTask()">Submit</button>
+              <button type="button" [disabled]="taskform.invalid" *ngIf="showUpd" class="btn btn-warning"
+                data-dismiss="modal" (click)="updateTaskData()">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

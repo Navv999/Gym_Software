@@ -1,0 +1,26 @@
+.custom-table {
+  background-color: #e9ecef; /* Change the background color to light gray */
+  padding: 20px; /* Add padding for spacing */
+  margin-right: 10px; /* Adjust position slightly to the right */
+  margin-bottom: 10px; /* Adjust position slightly downward */
+  box-shadow: 2x 2px 4px rgba(0, 0, 0, 0.2); /* Add a slight shadow for elevation */
+}
+
+  .modal-backdrop.show {
+    /* opacity: var(--bs-backdrop-opacity); */
+    z-index: 0;
+    opacity: 0.1; /* Adjust the opacity as needed */
+    pointer-events: none; /* Allow interaction with elements behind the backdrop */
+}
+
+.modal-backdrop {
+    opacity: 0.1; /* Adjust the opacity as needed */
+    pointer-events: none; /* Allow interaction with elements behind the backdrop */
+  }
+  
+  .modal-backdrop.show {
+    backdrop-filter: blur(8px); /* Adjust the blur radius as needed */
+}
+.delete_btn{
+    color: red;
+}

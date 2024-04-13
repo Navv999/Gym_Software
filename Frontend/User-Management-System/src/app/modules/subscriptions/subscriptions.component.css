@@ -1,0 +1,198 @@
+.Subscribelist {
+    color: #2d2d2d
+    
+}
+
+.Subscribelist span {
+    display: flex;
+    align-items: center;
+}
+
+.Subscribelist span h4 {
+    line-height: 24px;
+    display: inline-block;
+    font-size: 13px;
+    color: #2d2d2d;
+    margin: 0;
+    min-width: 90px;
+}
+
+.Subscribelist span p {
+    margin: 0 0 0 8px;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size:12px;
+}
+
+.Subscribelist span p span i {
+    font-size: 18px;
+    float: right;
+    line-height: 18px;
+    cursor: pointer
+}
+
+.Subscribelist span p span:first-child {
+    width: calc(100% - 25px);
+    font-size: 12px;
+    color: #5a5a5a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.Subscribelist span p span:last-child {
+    width: 20px;
+    margin-left: 5px;
+    color: #ed721f !important
+}
+
+.Subscribelist span p span {
+    display: inline-block
+}
+
+.subscription-item {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc; /* Add border to create a box */
+    border-radius: 5px; /* Add rounded corners */
+    margin-bottom: 10px; /* Add some spacing between items */
+  }
+  
+
+.tooltipText {
+    position: fixed;
+    right: 0;
+    bottom: 30px;
+    display: block;
+    left: 0;
+    margin: 0 auto;
+    width: max-content
+}
+
+.tooltipText .tooltiptext {
+    visibility: hidden;
+    width: min-content;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 10px;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    font-size: 12px;
+    display: block;
+    white-space: nowrap;
+    transition: .6s
+}
+
+.tooltipText .tooltiptext.show {
+    visibility: visible;
+    opacity: 1
+}
+
+.custom-table {
+    background-color: #e9ecef; /* Change the background color to light gray */
+    padding: 16px; /* Add padding for spacing */
+    margin-right: 10px; /* Adjust position slightly to the right */
+    margin-bottom: 10px; /* Adjust position slightly downward */
+    box-shadow: 2x 2px 4px rgba(0, 0, 0, 0.2); /* Add a slight shadow for elevation */
+}
+
+.close-btn {
+    background: 0 0;
+    border: none
+}
+
+.mat-header-cell {
+    color: #1a1f2f;
+    text-transform: capitalize;
+    font-weight: 500
+}
+
+.mat-mini-fab.mat-primary {
+    background: #fa721b
+}
+
+::ng-deep .mat-menu-content button.mat-mdc-menu-item .iconsize {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px !important;
+    color: #f29d38;
+    font-size: 21px;
+    line-height: initial
+}
+
+.topblockheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+button .example-margin {
+    margin: 0
+}
+
+::ng-deep .cdk-overlay-connected-position-bounding-box {
+    z-index: 9999 !important
+}
+
+::ng-deep .cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing {
+    z-index: -1
+}
+
+.topblockheader .header-buttons li {
+    display: inline-block
+}
+
+.topblockheader .header-buttons {
+    margin: 0;
+    display: flex;
+    align-items: center
+}
+
+.topblockheader .header-buttons li .icon-button-demo button {
+    margin-bottom: 0
+}
+
+.auth-form-btn .mat-icon {
+    margin: 100
+}
+
+
+.create-user-btn {
+    white-space: nowrap; /* Prevent line breaks in button text */
+  }
+  
+  .search-input {
+    margin-right: 0px; /* Adjust margin as needed */
+    margin-left: 0px; /* Adjust margin as needed */
+    margin-top: 25px; /* Adjust margin as needed */
+    width: 250px;
+
+  }
+
+  .mat-form-field {
+    width: 0%; /* Set width to 100% to fill the container */
+  }
+  
+  .search-input .mat-form-field-wrapper {
+    border-radius: 20px; /* Adjust border-radius as needed */
+  }
+  
+  .search-input .mat-form-field-infix {
+    font-size: 14px; /* Adjust font size as needed */
+    padding: 10px; /* Adjust padding as needed */
+  }
+  
+  .create-user-btn {
+    margin-left: 10px; /* Adjust margin as needed */
+    border-radius: 20px; /* Adjust border-radius as needed */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 14px; /* Adjust font size as needed */
+  }
+  

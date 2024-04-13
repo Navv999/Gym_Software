@@ -1,0 +1,139 @@
+<!-- <p>user works!</p> -->
+<div class="custom-table">
+  <section class="conten ">
+    <div class="content-block">
+      <div class="row clearfix">
+        <div class="col-12 topblockheader">
+          <div class="block-header breadcrumb-subheading">
+            <h5>Users</h5>
+            <p>The Users List provides a comprehensive view of all registered users within the system to streamline user
+              management by presenting essential information in a clear and easily navigable format.</p>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <ul class="header-buttons mb-md-0 mb-sm-4 mb-4">
+                <li class="dropdown me-md-4 me-3">
+                  <mat-form-field class="search-input">
+                    <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input>
+                  </mat-form-field>
+                </li>
+                <li>
+                  <div class="d-flex align-items-center">
+                    <button type="submit" class="btn btn-primary create-user-btn"
+                      [routerLink]="['/dashboard/addUser']">Create User</button>
+                  </div>
+                </li>
+              </ul>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row clearfix">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="card">
+            <div class="body">
+              <div class="table-responsive">
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+                  <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="email">
+                    <th mat-header-cell *matHeaderCellDef> Email </th>
+                    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="address">
+                    <th mat-header-cell *matHeaderCellDef> Address </th>
+                    <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="contact">
+                    <th mat-header-cell *matHeaderCellDef> Contact </th>
+                    <td mat-cell *matCellDef="let element"> {{element.contact}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="packages">
+                    <th mat-header-cell *matHeaderCellDef> Package </th>
+                    <td mat-cell *matCellDef="let element"> {{element.packages}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="startDate">
+                    <th mat-header-cell *matHeaderCellDef> Start Date </th>
+                    <td mat-cell *matCellDef="let element"> {{element.startDate}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="daysLeft">
+                    <th mat-header-cell *matHeaderCellDef> Left Days </th>
+                    <td mat-cell *matCellDef="let element"> {{element.daysLeft}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef> Action </th>
+                    <td mat-cell *matCellDef="let element">
+                      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                        <mat-icon>more_vert</mat-icon>
+                      </button>
+                      <mat-menu #menu="matMenu" class="custom-menu">
+                        <button mat-menu-item class="custom-menu-item" (click)="onEditUser(element.email)">
+                          <mat-icon>edit</mat-icon>
+                          <span>Edit</span>
+                        </button>
+                        <button mat-menu-item class="custom-menu-item"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter" (click)="openModel(element.email)">
+                          <mat-icon>delete</mat-icon>
+                          <span>Delete</span>
+                        </button>
+                      </mat-menu>
+                    </td>
+                  </ng-container>
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                  <!-- Row shown when there is no matching data. -->
+                  <tr class="mat-row" *matNoDataRow>
+                    <td class="mat-cell" colspan="4">"{{input.value}}"
+                      <p>No data Found! <br> We are unable to find the data you are looking for <a
+                          href="javascript:void(0)" (click)="reloadPage()">Try again!</a></p>
+                    </td>
+                  </tr>
+                </table>
+
+                <tr *ngIf="emptyList" class="d-flex align-item-center justify-content-center">
+                  <td>
+                    <img src="assets/images/not_found.gif" class="no_data_found">
+                    <p>No data Found! <br> We are unable to find the data you are looking for <a
+                        href="javascript:void(0)" (click)="reloadPage()">Try again!</a></p>
+                  </td>
+                </tr>
+
+                <!-- <mat-paginator [pageSizeOptions]="[5,10,25]" [length]="length" showFirstLastButtons
+                  [pageIndex]="pageIndex" [pageSize]="pageSize" (page)="handlePage($event)"></mat-paginator> -->
+                <mat-paginator #paginator class="demo-paginator" (page)="handlePageEvent($event)" [length]="length"
+                  [pageSize]="pageSize" [disabled]="disabled" [showFirstLastButtons]="showFirstLastButtons"
+                  [pageSizeOptions]="[5,10,25]" [hidePageSize]="hidePageSize"
+                  [pageIndex]="pageIndex" aria-label="Select page">
+                </mat-paginator>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-bs-backdrop="false">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content text-center p-4">
+      <img src="assets/images/delete.gif" class="text-center" style="width: 125px; height: auto; display: block; margin: 0 auto;">
+      <h5><i _ngcontent-efe-c362="" class="material-icons">report_problem</i> This action will permanently delete this
+        User. Do you want to still delete this User?</h5>
+         <p>Note - If you want to temporarily deactive this user, Please mark
+          user as inactive.</p>
+          <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 text-center">
+                <button mat-raised-button id="cancelBtn" class="cancelbtn msr-2 width80" data-bs-dismiss="modal">Cancel</button>&nbsp;
+                <button mat-raised-button class="width80 delete_btn" color="warn" data-bs-dismiss="modal" (click)="deleteUser()">Delete</button>
+            </div>
+        </div>        
+    </div>
+  </div>
+</div>
+</div>

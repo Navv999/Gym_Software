@@ -1,0 +1,89 @@
+<section class="content">
+  <div class="content-block custom-table">
+      <div class="block-header">
+        <h5>Edit User</h5>
+          <p>View User
+            An existing user's information can be seen here.</p>
+      </div>
+      <div class="row clearfix">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+              <div class="card">
+                  <div class="body">
+                      <form [formGroup]="myForm" class="m-4" (ngSubmit)="onSubmit()">
+                          <div class="row">
+                              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-2">
+                                  <label for="inputEmail4" class="form-label">Name</label>
+                                  <input type="text" class="form-control" id="inputEmail4" placeholder="Name"
+                                      formControlName="name">
+                                      <mat-error
+                                      *ngIf="myForm.get('name')?.touched && myForm.get('name')?.hasError('required')">
+                                      Name is required.
+                                  </mat-error>
+                              </div>
+
+                              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-2">
+                                  <label for="inputPassword4" class="form-label">Email </label>
+                                  <input type="email" class="form-control" id="inputPassword4" placeholder="Email"
+                                      formControlName="email">
+                                  <mat-error
+                                      *ngIf="myForm.get('email')?.touched && myForm.get('email')?.hasError('required')">
+                                      Email is required.
+                                  </mat-error>
+                              </div>
+                              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-2">
+                                  <label for="inputAddress" class="form-label">Contact</label>
+                                  <input type="text" class="form-control" id="inputAddress" placeholder="Contact"
+                                      formControlName="contact">
+                                      <mat-error
+                                      *ngIf="myForm.get('contact')?.touched && myForm.get('contact')?.hasError('required')">
+                                      Contact is required.
+                                  </mat-error>
+                              </div>
+                              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-2">
+                                  <label for="inputAddress2" class="form-label">Address</label>
+                                  <input type="text" class="form-control" id="inputAddress2" placeholder="Address"
+                                      formControlName="address">
+                                      <mat-error
+                                      *ngIf="myForm.get('address')?.touched && myForm.get('address')?.hasError('required')">
+                                      Address is required.
+                                  </mat-error>
+                              </div>
+                              <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-2">
+                                  <label for="inputCity" class="form-label">Start Date</label>
+                                  <input type="date" class="form-control" id="inputCity" placeholder="Start Date" formControlName="startDate">
+                              </div>
+                              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-2">
+                                  <label for="inputZip" class="form-label">End Date</label>
+                                  <input type="date" class="form-control" id="inputZip" placeholder="End Date" formControlName="endDate">
+                              </div> -->
+                              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-2">
+                                  <label for="inputZip" class="form-label">Package</label>
+                                  <mat-select id="inputZip" class="form-control" placeholder="Package"
+                                      formControlName="package" (selectionChange)="onRoleChange($event.value)">
+                                      <mat-option *ngFor="let option of roles" [value]="option.role">{{ option.display
+                                          }}</mat-option>
+                                  </mat-select>
+                              </div>
+                                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-2">
+                                  <label for="inputCity" class="form-label">Start Date</label>
+                                  <input type="date" class="form-control" id="inputCity" placeholder="Start Date" formControlName="startDate">
+                              </div>
+                              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-2">
+                                <label for="inputCity" class="form-label">Left Days</label>
+                                <input type="text" class="form-control" id="inputCity" placeholder="daysLeft" formControlName="daysLeft">
+                            </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2 text-end">
+                                  <button routerLink="/dashboard/users" type="button" id="cancelBtn"
+                                      class="msr-2 width80" mat-button>Cancel</button>&nbsp;
+                                  <button mat-raised-button color="primary" [disabled]="myForm.invalid">Update</button>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

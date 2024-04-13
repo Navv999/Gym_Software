@@ -1,0 +1,7 @@
+/* .modal{
+    z-index: 0 !important;
+  }
+  ::ng-deep .modal-backdrop.fade.in {
+    opacity: 0 !important;
+    z-index: -1 !important;
+} */

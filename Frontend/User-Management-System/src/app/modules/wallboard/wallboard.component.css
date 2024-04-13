@@ -1,0 +1,750 @@
+.dateTimeStatus,
+.dateTimeStatus .leftPart,
+.dateTimeStatus .leftPart .dateStatus,
+.dateTimeStatus .leftPart .timeStatus,
+.dateTimeStatus .rightPart .triggerSign {
+    align-items: center
+}
+
+.dateTimeStatus,
+.dateTimeStatus .leftPart,
+.dateTimeStatus .leftPart .dateStatus,
+.dateTimeStatus .leftPart .timeStatus,
+.dateTimeStatus .rightPart .triggerSign,
+.liveCallStatus {
+    display: flex;
+    display: flex
+}
+
+.liveActiveCalls,
+.liveCallDetail .details,
+.liveCallStatus .percentile h4 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.aicCalls,
+.aocalls,
+.bold-text,
+.dateed,
+.greenBorder {
+    transition: font-size .1s
+}
+
+.dateTimeStatus {
+    justify-content: space-between
+}
+
+.callSummaryBox .card_body,
+.dateTimeStatus .rightPart,
+.totalVADetails .card_body {
+    display: block;
+    margin: 0;
+    padding: 0
+}
+
+.dateTimeStatus .leftPart .dateStatus p,
+.dateTimeStatus .leftPart .timeStatus p {
+    margin: 0 0 0 5px;
+    padding: 0;
+    color: #2d2d2d;
+    line-height: inherit
+}
+
+.dateTimeStatus .leftPart .dateStatus span,
+.dateTimeStatus .leftPart .timeStatus span {
+    height: 24px;
+    width: auto
+}
+
+.dateTimeStatus .rightPart .triggerSign p {
+    margin-bottom: 0;
+    padding-left: 10px
+}
+
+.dateTimeStatus .rightPart .triggerSign p.riskSign,
+.dateTimeStatus .rightPart .triggerSign p.warningSign {
+    position: relative;
+    display: block;
+    margin: 0
+}
+
+.dateTimeStatus .rightPart .triggerSign p.warningSign:before {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #f29d38;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0
+}
+
+.dateTimeStatus .rightPart .triggerSign p.riskSign:before {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: red;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0
+}
+
+.liveCallStatus {
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 15px 10px;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between
+}
+
+.liveCallDetail {
+    padding: 10px;
+    display: block;
+    position: relative;
+    height: 100%
+}
+
+.liveCallStatus .details {
+    text-align: left;
+    display: block;
+    text-transform: uppercase;
+    width: auto
+}
+
+.liveCallDetail .details {
+    position: absolute
+}
+
+.liveCallStatus .percentile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    display: block;
+    min-width: 40px
+}
+
+.liveCallDetail .details p,
+.liveCallStatus .details p {
+    margin: 0 0 5px;
+    color: #5a5a5a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.liveCallDetail .details h4,
+.liveCallStatus .details h4 {
+    color: #2d2d2d;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600
+}
+
+.liveCallStatus .percentile h4 {
+    font-size: 14px;
+    color: #fff;
+    position: absolute
+}
+
+.OnCall_Agents {
+    border-color: #bf83ff
+}
+
+.OnCall_Agents .percentile {
+    background: #bf83ff
+}
+
+.AV_Agents {
+    border-color: #f9597e
+}
+
+.AV_Agents .percentile {
+    background: #f9597e
+}
+
+.VA_Call {
+    border-color: #ff947a
+}
+
+.VA_Call .percentile {
+    background: #ff947a
+}
+
+.Waiting_Call {
+    border-color: #f29d38
+}
+
+.Waiting_Call .percentile {
+    background: #f29d38
+}
+
+.Total_Call {
+    border-color: #3cd856
+}
+
+.Total_Call .percentile {
+    background: #3cd856
+}
+
+.totalVADetails {
+    display: block
+}
+
+.totalVADetails .Card_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee
+}
+
+.totalVADetails .Card_head .Title {
+    color: #2d2d2d;
+    display: block;
+    width: calc(100% - 60px)
+}
+
+.totalVADetails .Card_head .countNum {
+    min-width: 60px;
+    display: block
+}
+
+.totalVADetails .Card_head .Title h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: inherit
+}
+
+.totalVADetails .Card_head .countNum p {
+    font-size: 32px;
+    color: #5a5a5a;
+    margin: 0;
+    line-height: initial;
+    font-weight: 500;
+    text-align: end
+}
+
+.activeCalls p,
+.liveActiveCalls p,
+.totalVADetails .card_body ul {
+    margin: 0
+}
+
+.title_heading,
+.totalVADetails .card_body ul li {
+    display: block;
+    margin: 0
+}
+
+.totalVADetails .card_body ul li .list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0
+}
+
+.callSummaryBox .card_body ul li p,
+.totalVADetails .card_body ul li .list h4 {
+    color: #2d2d2d;
+    font-size: 14px;
+    line-height: inherit;
+    margin: 0;
+    font-weight: 500
+}
+
+.totalVADetails .card_body ul li .list p {
+    color: #5a5a5a;
+    font-size: 18px;
+    line-height: initial;
+    margin: 0
+}
+
+.totalVADetails .card_foot {
+    display: block;
+    margin: 0;
+    padding: 20px 0 0
+}
+
+.totalVADetails .card_foot p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    line-height: initial;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2d2d2d;
+    padding: 10px 0
+}
+
+.totalVADetails .card_foot p span {
+    color: #5a5a5a;
+    font-size: 14px;
+    width: auto;
+    min-width: 60px;
+    text-align: end
+}
+
+::ng-deep .totalVirtualAgent .mat-progress-bar-fill::after {
+    background-color: #ff947a
+}
+
+::ng-deep .totalVirtualAgent .mat-progress-bar-background {
+    fill: #FFF4DE
+}
+
+::ng-deep .totalVirtualAgent .mat-progress-bar-buffer {
+    background-color: #fff4de
+}
+
+.mat-progress-bar {
+    height: 10px;
+    border-radius: 5px
+}
+
+.callSummaryBox .title_heading {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee
+}
+
+.callSummaryBox .title_heading h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: inherit;
+    color: #2d2d2d;
+    display: block
+}
+
+.callSummaryBox .card_body ul {
+    margin: auto
+}
+
+.callSummaryBox .card_body ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0
+}
+
+.callSummaryBox .card_body ul li:last-child {
+    margin-bottom: 0
+}
+
+.callSummaryBox .card_body ul li span {
+    color: #5a5a5a;
+    font-size: 14px;
+    line-height: initial;
+    margin: 0;
+    font-weight: 400
+}
+
+.title_heading h2 {
+    font-size: 21px;
+    margin: 0 0 10px;
+    line-height: inherit
+}
+
+.callStatusBox {
+    display: inline-block;
+    width: calc(100% / 5 - 12px);
+    margin-right: 15px;
+    min-width: 185px;
+    padding: 5px 0
+}
+
+.callStatusBox:last-child {
+    margin-right: 0
+}
+
+.OnCall_Agents .liveCallDetail {
+    min-height: 200px
+}
+
+.activeCalls {
+    width: 100%;
+    height: 144px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #fff
+}
+
+.liveActiveCalls {
+    position: absolute
+}
+
+.liveCallDetails {
+    width: 100%
+}
+
+.liveCallDetails h2 {
+    width: max-content;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 600
+}
+
+.liveCallDetails p {
+    margin: 0;
+    width: 100%
+}
+
+.grayBorder {
+    border: 1px solid #d9d9d9;
+    border-bottom-width: 6px
+}
+
+.blueBorder {
+    color: #05adc5
+}
+
+.greenBorder {
+    color: #45a148;
+    font-size: 28px;
+    font-weight: 600
+}
+
+.orengeBorder {
+    color: #1e40af
+}
+
+.yellowBorder {
+    color: #f78f05
+}
+
+.lightgreenBorder {
+    color: #568729
+}
+
+.purpleBorder {
+    color: #7c3aed;
+    display: inline
+}
+
+.pinkBorder {
+    color: #db2777
+}
+
+.roseBorder {
+    color: #ef4444
+}
+
+.aicCalls,
+.aocalls {
+    font-size: 24px;
+    font-weight: 600
+}
+
+.bold-text,
+.tacCalls {
+    font-size: 28px;
+    font-weight: 600
+}
+
+.aicCalls:hover,
+.aocalls:hover {
+    font-weight: 700;
+    font-size: 36px
+}
+
+.borderRight {
+    border-right: 1px solid
+}
+
+.sameHight .liveCallDetails {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.totalactiveCalls {
+    background-image: linear-gradient(180deg, rgb(119 206 216), rgb(5 173 197))
+}
+
+.agentactiveCalls {
+    background-image: linear-gradient(180deg, rgb(251 165 32), rgb(247 143 5))
+}
+
+.selfactiveCalls {
+    background-image: linear-gradient(180deg, rgb(96 185 101), rgb(69 161 72))
+}
+
+.abandactiveCalls {
+    background-image: linear-gradient(180deg, rgb(240 79 76), rgb(231 60 54))
+}
+
+.activeCalls h2 {
+    font-weight: 600
+}
+
+.bold-text {
+    cursor: pointer
+}
+
+.bold-text:hover {
+    font-weight: 700;
+    font-size: 48px;
+    color: #00f
+}
+
+.dateed {
+    color: orange;
+    font-size: 24px;
+    font-weight: 200
+}
+
+.dateed:hover {
+    font-size: 30px
+}
+
+
+
+body {
+    /* //background-image: url('https://images.unsplash.com/photo-1560568082-c15188aa6510?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80'); */
+    background-color: #3498db;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.container {
+    margin: 60px auto;
+    background: #fff;
+    padding: 0;
+    border-radius: 7px;
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+}
+
+.settings-tray {
+    background: #eee;
+    padding: 10px 15px;
+    border-radius: 7px;
+
+    .no-gutters {
+        padding: 0;
+    }
+
+    &--right {
+        float: right;
+
+        i {
+            margin-top: 10px;
+            font-size: 25px;
+            color: grey;
+            margin-left: 14px;
+            transition: .3s;
+
+            &:hover {
+                /* color: $blue; */
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.search-box {
+    background: #fafafa;
+    padding: 10px 13px;
+
+    .input-wrapper {
+        background: #fff;
+        border-radius: 40px;
+
+        i {
+            color: grey;
+            margin-left: 7px;
+            vertical-align: middle;
+        }
+    }
+}
+
+input {
+    border: none;
+    border-radius: 30px;
+    width: 80%;
+
+    &::placeholder {
+        color: #e3e3e3;
+        font-weight: 300;
+        margin-left: 20px;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.friend-drawer {
+    padding: 10px 15px;
+    display: flex;
+    vertical-align: baseline;
+    background: #fff;
+    transition: .3s ease;
+
+    &--grey {
+        background: #eee;
+    }
+
+    .text {
+        margin-left: 12px;
+        width: 70%;
+
+        h6 {
+            margin-top: 6px;
+            margin-bottom: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .time {
+        color: grey;
+    }
+
+    &--onhover:hover {
+        /* background: $blue; */
+        cursor: pointer;
+
+        p,
+        h6,
+        .time {
+            color: #fff !important;
+        }
+    }
+}
+
+hr {
+    margin: 5px auto;
+    /* // width: 60%; */
+}
+
+.chat-bubble {
+    padding: 10px 14px;
+    background: #eee;
+    margin: 10px 30px;
+    border-radius: 9px;
+    position: relative;
+    animation: fadeIn 1s ease-in;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-bottom: 0;
+        margin-top: -10px;
+    }
+
+    &--left {
+        &:after {
+            left: 0;
+            border-right-color: #eee;
+            border-left: 0;
+            margin-left: -20px;
+        }
+    }
+
+    &--right {
+        &:after {
+            right: 0;
+            /* border-left-color: $blue; */
+            border-right: 0;
+            margin-right: -20px;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.offset-md-9 {
+    .chat-bubble {
+        /* background: $blue; */
+        color: #fff;
+    }
+}
+
+.chat-box-tray {
+    background: #eee;
+    display: flex;
+    align-items: baseline;
+    padding: 10px 15px;
+    align-items: center;
+    margin-top: 19px;
+    bottom: 0;
+
+    input {
+        margin: 0 10px;
+        padding: 6px 2px;
+    }
+
+    i {
+        color: grey;
+        font-size: 30px;
+        vertical-align: middle;
+
+        &:last-of-type {
+            margin-left: 25px;
+        }
+    }
+}
+
+.custom-table {
+    background-color: #e9ecef;
+    /* Change the background color to light gray */
+    padding: 20px;
+    /* Add padding for spacing */
+    margin-right: 0px;
+    /* Adjust position slightly to the right */
+    margin-bottom: 0px;
+    /* Adjust5 position slightly downward */
+    margin-top: px;
+    box-shadow: 2x 2px 4px rgba(0, 0, 0, 0.2);
+    /* Add a slight shadow for elevation */
+}
+
+.col-8,
+.col-4 {
+    margin-bottom: 30px; 
+}
+
+/* .col-8 {
+    width: 100%; 
+} */
+
+/* .col-4 {
+    width: 100%; 
+} */

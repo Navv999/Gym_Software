@@ -1,0 +1,7 @@
+.custom-table {
+    background-color: #e9ecef; /* Change the background color to light gray */
+    padding: 20px; /* Add padding for spacing */
+    margin-right: 10px; /* Adjust position slightly to the right */
+    margin-bottom: 10px; /* Adjust position slightly downward */
+    box-shadow: 2x 2px 4px rgba(0, 0, 0, 0.2); /* Add a slight shadow for elevation */
+}

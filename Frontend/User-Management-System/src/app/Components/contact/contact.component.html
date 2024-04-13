@@ -1,0 +1,41 @@
+<br>
+<!-- <button mat-fab extended color="primary" *ngIf="this.adminShow" routerLink="../user" >
+    All Users
+</button>&nbsp;
+
+<button  mat-fab extended color="primary"  routerLink="../task">
+    All Task
+</button> -->
+<body>
+    <!-- <mat-card> -->
+        <!-- <b><span>Dashboard</span></b> -->
+    <!-- </mat-card> -->
+    <br>
+    <div  class="row">
+        <div class="column">
+            <div class="card">
+                <div *ngIf="this.adminShow" class="container">
+                    <h2 class="title">Total Users:</h2>
+                    <h1 class="title">{{allUserData}}</h1>
+                    <p><button mat-fab extended color="primary" class="button" *ngIf="this.adminShow" (click)="activeUser()" >View Active User</button></p>
+                    <h1 class="title">{{ActiveUserData}}</h1>
+                    <p><button mat-fab extended color="primary" class="button" *ngIf="this.adminShow" (click)="InactiveUser()" >View In Active User</button></p>
+                    <h1 class="title">{{InActiveUserData}}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2 class="title">Total Tasks:</h2>
+                    <h1 class="title">{{allTaskData}}</h1>
+                    <p><button mat-fab extended color="primary" class="button" (click)="completeTask()" >View Complete Task</button></p>
+                    <h1 class="title">{{completeTaskData}}</h1>
+                    <p><button mat-fab extended color="primary" class="button" (click)="incompleteTask()" >View Pending Task</button></p>
+                    <h1 class="title">{{pendingTaskData}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

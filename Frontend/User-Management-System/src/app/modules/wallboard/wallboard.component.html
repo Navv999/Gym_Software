@@ -1,0 +1,253 @@
+<section class="content">
+    <div class="content-block custom-table">
+        <div class="row clearfix">
+            <div class="col-12 topblockheader">
+                <div class="block-header breadcrumb-subheading">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row clearfix">
+            <div class="col-12">
+                <div class="dateTimeStatus">
+                    <div class="leftPart">
+                        <div class="dateStatus ">
+                            <span><i _ngcontent-ng-c3582763249="" class="material-icons dateed">date_range</i></span>
+                            <b>{{currentDay | date : 'EEE dd MMMM'}}</b>
+                        </div>
+                        <div class="timeStatus ms-lg-3 ms-md-3 ms-sm-2">
+                            <span><i _ngcontent-ng-c3582763249="" class="material-icons dateed">access_time</i></span>
+                            <b>{{currentDay | date : 'hh:mm:ss a'}}</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xl-8 col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="card grayBorder">
+                            <div class="body liveCalls">
+                                <div class="row py-2">
+                                    <div class="col-12 ">
+                                        <div class="liveCallDetails text-center">
+                                            <!-- <h2 class="bold-text" matTooltip="Retrieve data concerning the active calls." matTooltipPosition="before" >{{call_count.total}}</h2> -->
+                                            <h2 class="bold-text">{{ this.totaUserCount && this.totaUserCount < 0 ? 0 :
+                                                    this.totaUserCount }}</h2>
+                                                    <!-- <h2 class="bold-text">{{ 0 }}</h2> -->
+                                                    <p>Total Users</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="hr" />
+                                <div class="row py-2">
+                                    <div class="col-6 borderRight">
+                                        <div class="liveCallDetails text-center">
+                                            <h2 class="aicCalls">
+                                                {{
+                                                this.totalPlatinumUsers && this.totalPlatinumUsers < 0 ? 0 :
+                                                    this.totalPlatinumUsers }} <!-- <h2 class="aocalls">{{ 0 }}</h2> -->
+                                            </h2>
+                                            <p>Platinum User</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="liveCallDetails text-center">
+                                            <h2 class="aocalls">
+                                                {{
+                                                this.totalDiamondUsers && this.totalDiamondUsers < 0 ? 0 :
+                                                    this.totalDiamondUsers }} <!-- <h2 class="aocalls">{{ 0 }}</h2> -->
+                                            </h2>
+                                            <p>Diamond User</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card grayBorder liveCallsDVA">
+                            <div class="body">
+                                <div class="row py-2">
+                                    <div class="12">
+                                        <div class="liveCallDetails text-center">
+                                            <!-- <h2 class="lightgreenBorder aocalls">{{totalDvaAht?totalDvaAht:'00:00:00'}}</h2> -->
+                                            <h2 class="lightgreenBorder aocalls">{{0}}</h2>
+
+                                            <p>Active User</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="hr" />
+                                <div class="row py-2">
+                                    <div class="col-12">
+                                        <div class="liveCallDetails text-center">
+                                            <!-- <h2 class="yellowBorder aocalls">{{totalAWT?totalAWT:'00:00:00'}}</h2> -->
+                                            <h2 class="yellowBorder aocalls">{{0}}</h2>
+
+                                            <p>In-Active User</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row liveCallsAgentQueue">
+                    <div class="col-4">
+                        <div class="card grayBorder">
+                            <div class="body">
+                                <div class="liveCallDetails text-center">
+                                    <h2 class="aocalls lightgreenBorder">
+                                        {{ this.totalGoldUsers && this.totalGoldUsers < 0 ? 0 : this.totalGoldUsers }}
+                                        <!-- {{ 0 }} -->
+                                    </h2>
+                                    <p>Gold User</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card grayBorder">
+                            <div class="body">
+                                <div class="liveCallDetails text-center">
+                                    <h2 class="roseBorder aocalls">
+                                        {{ this.totalSilverUsers && this.totalSilverUsers < 0 ? 0 : this.totalSilverUsers }}
+                                        <!-- {{ 0 }} -->
+                                    </h2>
+                                    <p>Silver User</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card grayBorder">
+                            <div class="body">
+                                <div class="liveCallDetails text-center">
+                                    <h2 class="yellowBorder aocalls">
+                                        <!-- {{ call_count.agent_calls && call_count.agent_calls < 0 ? 0 : call_count.agent_calls }} -->
+                                        {{ 0 }}
+                                    </h2>
+                                    <p>Agent on Calls</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Current day historic data -->
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-12">
+                        <div class="card overflow-hidden">
+                            <div class="body p-0">
+                                <div class="activeCalls totalactiveCalls text-center">
+                                    <!-- <h2 class="aocalls">{{total_calls}}</h2> -->
+                                    <h2 class="aocalls">{{ 0 }}</h2>
+                                    <p>Active Platinum User</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-12">
+                        <div class="card overflow-hidden">
+                            <div class="body p-0">
+                                <div class="activeCalls agentactiveCalls text-center">
+                                    <!-- <h2 class="aocalls">{{agentcall}}</h2> -->
+                                    <h2 class="aocalls">{{ 0 }}</h2>
+                                    <p>Active Diamond User</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-12">
+                        <div class="card overflow-hidden">
+                            <div class="body p-0">
+                                <div class="activeCalls selfactiveCalls text-center">
+                                    <!-- <h2 class="aocalls">{{self_servicecall}}</h2> -->
+                                    <h2 class="aocalls">{{ 0 }}</h2>
+                                    <p>Active Gold User</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-12">
+                        <div class="card overflow-hidden">
+                            <div class="body p-0">
+                                <div class="activeCalls abandactiveCalls text-center">
+                                    <!-- <h2 class="aocalls">{{abandonedcall}}</h2> -->
+                                    <h2 class="aocalls">{{ 0 }}</h2>
+                                    <p>Active Silver User</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="body">
+                                <div class="callStatusBox">
+                                    <div class="liveCallStatus OnCall_Agents liveAgents">
+                                        <div class="details">
+                                            <p>Total Agents</p>
+                                             </div>
+                                        <div class="percentile">
+                                            <h4 >{{agent_count.total}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="callStatusBox">
+                                    <div class="liveCallStatus Total_Call liveAgentsLogged">
+                                        <div class="details">
+                                            <p>Logged in Agents</p>
+                                        </div>
+                                        <div class="percentile">
+                                            <h4 >{{agent_count.logged_in}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="callStatusBox">
+                                    <div class="liveCallStatus AV_Agents liveAgentsAvailable">
+                                        <div class="details">
+                                            <p>Available Agents</p>
+                                        </div>
+                                        <div class="percentile">
+                                            <h4 >{{agent_count.available}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="callStatusBox">
+                                    <div class="liveCallStatus Waiting_Call liveAgentsBusy">
+                                        <div class="details">
+                                            <p>Busy Agents</p>
+                                        </div>
+                                        <div class="percentile">
+                                            <h4 >{{agent_count.busy}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="callStatusBox">
+                                    <div class="liveCallStatus VA_Call liveAgentsOffline">
+                                        <div class="details">
+                                            <p>Offline Agents</p>
+                                        </div>
+                                        <div class="percentile">
+                                            <h4>{{agent_count.offline}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</section>

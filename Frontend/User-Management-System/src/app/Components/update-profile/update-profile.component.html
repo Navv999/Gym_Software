@@ -1,0 +1,75 @@
+
+  <!-- Modal -->
+   
+  
+  <!-- <div class="modal fade" id="exampleModal" role="dialog" data-backdrop="static" data-keyboard="false"> -->
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel">Profile</h2>
+        
+          </div>
+          <div class="modal-body">
+              <form [formGroup]="signup" (ngSubmit)="updation(signup.value)">
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">First Name</label>
+                      <input type="text" class="form-control" formControlName="fname" placeholder="Enter First Name">
+                      <br>
+                      <span style="color:red;"
+                          *ngIf="signup.controls['fname'].touched && signup.get('fname')?.hasError('required')">*First Name is
+                          required</span>
+                      <span style="color:red;"
+                          *ngIf="signup.get('fname')?.hasError('pattern') || signup.get('fname')?.hasError('minlength')">*Name
+                          should be in letter</span>
+                    </div>
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Last Name</label>
+                      <input type="text" class="form-control" formControlName="lname" placeholder="Enter Last Name">
+                      <br>
+                      <span style="color:red;"
+                          *ngIf="signup.controls['lname'].touched && signup.get('lname')?.hasError('required')">*Last Name is
+                          required</span>
+                      <span style="color:red;"
+                          *ngIf="signup.get('lname')?.hasError('pattern') || signup.get('lname')?.hasError('minlength')">*Name
+                          should be in letter</span>
+                    </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" formControlName="email" [readOnly]="this.editData" placeholder="Enter email">
+                    <br>
+                    <!-- <span style="color:red;"
+                        *ngIf="emailErrorMsg">*Email Already Exists</span> -->
+                    <span style="color:red;"
+                        *ngIf="signup.controls['email'].touched && signup.get('email')?.hasError('required')">*Email is
+                        required</span>
+                    <span style="color:red;" *ngIf="signup.get('email')?.hasError('pattern')">*Enter Valid Email Address</span>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                    <br>
+                    <span style="color:red;"
+                        *ngIf="signup.controls['password'].touched && signup.get('password')?.hasError('required')">*password is
+                        required</span>
+                    <span style="color:red;"
+                        *ngIf="signup.get('password')?.hasError('minlength')">*password
+                        must be at lest 5 characters </span>
+                  </div>
+                  <!-- &nbsp;
+                  <span>Already Have Account <a routerLink="../signin">Login</a></span>
+                  <br /> -->
+                  <div class="modal-footer">
+                       <button type="button" class="btn btn-secondary" data-dismiss="modal" routerLink="/dashboard">Close</button>
+                  <button type="submit" class="btn btn-primary">Update</button>
+              </div>
+                </form>
+              
+          </div>
+          <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          <!-- </div> -->
+        </div>
+      </div>
+    <!-- </div>   -->
+  
